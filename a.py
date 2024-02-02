@@ -1,7 +1,12 @@
-def radius(r):
-    return 3.14*(3 / 4)*(r**3)
+def unique(listt):
+    newlistt = []
+    for element in listt:
+        if element not in newlistt:
+            newlistt.append(element)
+    return newlistt
 
 
-r = int(input(""))
-result = radius(r)
+numbers = input("")
+l = list(map(int, numbers.split()))
+result = unique(l)
 print(result)
