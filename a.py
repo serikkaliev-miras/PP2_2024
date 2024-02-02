@@ -1,12 +1,7 @@
-def unique(listt):
-    newlistt = []
-    for element in listt:
-        if element not in newlistt:
-            newlistt.append(element)
-    return newlistt
+def pal(s):
+    return s == s[::-1]
 
 
-numbers = input("")
-l = list(map(int, numbers.split()))
-result = unique(l)
+s = input("")
+result = pal(s)
 print(result)

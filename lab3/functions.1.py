@@ -165,3 +165,14 @@ numbers = input("")
 l = list(map(int, numbers.split()))
 result = unique(l)
 print(result)
+
+# 11
+
+
+def pal(s):
+    return s == s[::-1]
+
+
+s = input("")
+result = pal(s)
+print(result)
