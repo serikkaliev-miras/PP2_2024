@@ -1,0 +1,107 @@
+# 1
+n = int(input(""))
+
+
+def fun(n):
+    print(28.3495231 * n)
+
+
+fun(n)
+
+# 2
+c = int(input(""))
+
+
+def f(c):
+    print((5 / 9) * (c - 32))
+
+
+f(c)
+
+# 3
+numheads, numlegs = int(input("")), int(input(""))
+
+
+def solve(numheads, numlegs):
+    # print((numlegs / 2) - numheads, numheads - ((numlegs / 2) - numheads))
+    a = (numlegs / 2) - numheads
+    b = numheads - ((numlegs / 2) - numheads)
+    print(int(a), int(b))
+
+
+solve(numheads, numlegs)
+
+# 4
+'''
+def prime(n):
+    cnt = 0
+    for i in range(2, n + 1):
+        if n % i == 0:
+            cnt = cnt + 1
+    return cnt == 2
+def filter_prime(m):
+    numbers = []
+    for n in m:
+        if prime(n):
+            numbers.append(n)
+    return numbers
+m = list(map(int, input().split()))
+print(filter_prime(m))
+'''
+
+
+def isPrime(n):
+    cnt = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            cnt = cnt + 1
+    return cnt == 2
+
+
+m = list(map(int, input().split()))
+print([n for n in m if isPrime(n)])
+
+# 5
+'''
+from itertools import permutations
+str = input("")
+permutations_string = list(permutations(str))
+print(permutations_string)
+'''
+
+
+def permutate(s):
+    p = permutations(s)
+    for i in p:
+        print(i)
+
+
+permutate(input("string: "))
+
+# 6
+s = input("")
+
+
+def reverse(s):
+    word = s.split()
+    return word[::-1]
+
+
+result = reverse(s)
+print(result)
+'''
+def reverse(sentence):
+    word = sentence.split()
+    word_r = reversed(word)
+    reverse_s = ''.join(word_r)
+    return reverse_s
+
+
+s = input("")
+result = reverse(s)
+
+for word in result.split():
+    print(word)
+'''
+
+# 7
