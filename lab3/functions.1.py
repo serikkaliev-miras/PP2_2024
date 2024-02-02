@@ -105,3 +105,38 @@ for word in result.split():
 '''
 
 # 7
+
+
+def has_33(nums):
+    for i in range(len(nums) - 1):
+        if nums[i] == 3 and nums[i+1] == 3:
+            return True
+    return False
+
+
+nums = input("")
+l = list(map(int, nums.split()))
+result = has_33(l)
+print(result)
+
+# 8
+
+
+def spy_game(nums):
+    position = 0
+    for num in nums:
+        if position == 0 and num == 0:
+            position += 1
+        elif position == 1 and num == 0:
+            position += 1
+        elif position == 2 and num == 7:
+            return True
+    return False
+
+
+nums = input("")
+l = list(map(int, nums.split()))
+result = spy_game(l)
+print(result)
+
+# 9
