@@ -25,3 +25,15 @@ def sub():
 
 
 sub()
+
+# 3
+c = input("")
+
+
+def cat(c):
+    for i in movies:
+        if i["category"] == c:
+            print(i["name"])
+
+
+cat(c)
