@@ -53,3 +53,19 @@ def average():
 
 
 print(average())
+
+# 5
+cati = input("")
+
+
+def average():
+    total = 0
+    n = 0
+    for movie in movies:
+        if movie["category"] == cati:
+            total += movie["imdb"]
+            n += 1
+    return total / n
+
+
+print(average())
