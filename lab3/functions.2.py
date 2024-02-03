@@ -37,3 +37,14 @@ def cat(c):
 
 
 cat(c)
+
+ #4
+ 
+ def summ():
+    cnt = 0
+    for movie in movies:
+        cnt = cnt + movie["imdb"]
+    print(cnt)
+
+
+summ()

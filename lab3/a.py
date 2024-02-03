@@ -1,12 +1,11 @@
 from movies import movies
 
-c = input("")
+
+def summ():
+    cnt = 0
+    for movie in movies:
+        cnt = cnt + movie["imdb"]
+    print(cnt)
 
 
-def cat(c):
-    for i in movies:
-        if i["category"] == c:
-            print(i["name"])
-
-
-cat(c)
+summ()
