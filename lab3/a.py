@@ -1,11 +1,14 @@
 from movies import movies
 
 
-def summ():
-    cnt = 0
+def average():
+    total = 0
+    inp = input("")
+    films = [x.strip() for x in inp.split(',')]
     for movie in movies:
-        cnt = cnt + movie["imdb"]
-    print(cnt)
+        if movie["name"] in films:
+            total += movie["imdb"]
+    return total / len(films)
 
 
-summ()
+print(average())

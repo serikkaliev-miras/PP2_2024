@@ -1,30 +1,31 @@
 from movies import movies
 
-import random
 
 # 1
 
 
-def func():
-    x = random.choice(movies)
-    if x["imdb"] > 5.5:
-        print(x["name"], True)
-    else:
-        print(x["name"], False)
+def func(m):
+    x = input("")
+    for i in m:
+        if i["name"] == x and i["imdb"] > 5.5:
+            print(True)
 
 
-print(func())
+func(movies)
+
 
 # 2
+mylist = []
 
 
 def sub():
-    for movie in movies:
+    for movie in range(len(movies)):
         if movie["imdb"] > 5.5:
-            print(movie["name"])
+            mylist.append(movie["name"])
+    return mylist
 
 
-sub()
+print(sub())
 
 # 3
 c = input("")
@@ -38,13 +39,17 @@ def cat(c):
 
 cat(c)
 
- #4
- 
- def summ():
-    cnt = 0
+# 4
+
+
+def average():
+    total = 0
+    inp = input("")
+    films = [x.strip() for x in inp.split(',')]
     for movie in movies:
-        cnt = cnt + movie["imdb"]
-    print(cnt)
+        if movie["name"] in films:
+            total += movie["imdb"]
+    return total / len(films)
 
 
-summ()
+print(average())
