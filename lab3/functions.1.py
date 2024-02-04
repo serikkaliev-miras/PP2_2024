@@ -1,4 +1,5 @@
 # 1
+import random
 n = int(input(""))
 
 
@@ -192,3 +193,28 @@ numbers = input("")
 l = list(map(int, numbers.split()))
 result = his(l)
 print(result)
+
+# 13
+
+
+name = input("Hello! What is your name? \n")
+
+
+def guess():
+    x = random.randint(1, 20)
+    print(f"Well, {name}, I am thinking of a number between 1 and 20.")
+    b = False
+    i = 0
+    while (b == False):
+        print("Take a guess.")
+        i += 1
+        if (x == i):
+            print(f"Good job, KBTU! You guessed my number in {i} guesses!")
+            b = True
+        elif (x > i):
+            print("Your guess is too low.")
+        else:
+            print("Your guess is too high.")
+
+
+guess()
