@@ -25,10 +25,10 @@ class Shape:
 
 class Square(Shape):
     def __init__(self):
-        self.a = int(input(""))
+        self.length = int(input(""))
 
     def area(self):
-        self.areaa = self.a * self.a
+        self.areaa = self.length * self.length
         print(self.areaa)
 
 
