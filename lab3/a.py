@@ -1,16 +1,17 @@
 class Shape:
     def area(self):
-        self.areaa = 0
+        self.a = 0
 
 
-class Square(Shape):
-    def __init__(self):
-        self.a = int(input(""))
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
 
     def area(self):
-        self.areaa = self.a * self.a
-        print(self.areaa)
+        self.a = self.width * self.length
+        print(self.a)
 
 
-d = Square()
-d.area()
+r = Rectangle(int(input("Enter length: ")), int(input("Enter width: ")))
+r.area()
