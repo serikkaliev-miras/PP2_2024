@@ -2,9 +2,9 @@ import datetime
 x = datetime.datetime.now()
 # 1
 
-# yesterday = (x - datetime.timedelta(days=1)).strftime("%A")
-# tomorrow = (x + datetime.timedelta(days=1)).strftime("%A")
-# print(yesterday, x.strftime("%A"), tomorrow)
+yesterday = (x - datetime.timedelta(days=1)).strftime("%A")
+tomorrow = (x + datetime.timedelta(days=1)).strftime("%A")
+print(yesterday, x.strftime("%A"), tomorrow)
 
 # 2
 
