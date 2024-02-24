@@ -1,8 +1,9 @@
 import json
 
-with open("sample_data.json", "r") as my_file:
-    json_string = my_file.read()
-data = json.loads(json_string)
+try:
+    with open("sample_data.json", "r") as my_file:
+        json_string = my_file.read()
+    data = json.loads(json_string)
 
 interfaces = data.get('imdata', [])
 print("Interface Status")
