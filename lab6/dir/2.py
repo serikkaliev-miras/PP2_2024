@@ -2,7 +2,7 @@ import os
 def check(path):
 	if os.path.exists(path):
 		print(f"the way {path} exist")
- 	else:
+	else:
 		print(f"the way {path} not exist")
 		return 
     if os.access(path , os.R_OK):
