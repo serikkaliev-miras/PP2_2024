@@ -18,7 +18,7 @@ square(n)
 
 #     def generate(self):
 #         while self.current <= self.limit:
-#             print(self.current**2)
+#             yield self.current**2
 #             self.current += 1
 
 
