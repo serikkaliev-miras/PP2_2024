@@ -1,7 +1,7 @@
 import pygame
+import time
 from pygame.locals import *
 import random
-import math
 
 pygame.init()
 screen = pygame.display.set_mode((400, 600))
@@ -34,6 +34,7 @@ ycoin = 0
 counter = 0
 
 font = pygame.font.SysFont("Score", 30)
+game_over = font.render("Game Over", True, (0, 0, 0))
 
 
 pygame.mixer.music.load("background.wav")
@@ -76,11 +77,15 @@ while gameon:
             xyour += 5
 
     if ycrect.colliderect(ecrect):
-        pygame.mixer.music.load("crash.wav")
-        pygame.mixer.music.play(-1)
+        pygame.mixer.Sound('crash.wav').play()
+        time.sleep(0.5)
+
         screen.fill((255, 0, 0))
-        score = font.render("YOU LOSED!", True, (0, 0, 0))
+        screen.blit(game_over, (30, 250))
+        pygame.display.update()
+
         screen.blit(score, (150, 210))
+        time.sleep(0.5)
         gameon = False
 
     if ycrect.colliderect(coinrect):

@@ -70,7 +70,7 @@ class Player(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.image.load("Player.png")
         self.rect = self.image.get_rect()
-        self.rect.center = (160, 520)
+        self.rect.center = (160, 540)
     # move method
 
     def move(self):
@@ -151,7 +151,8 @@ while True:
     DISPLAYSURF.blit(scores, (10, 10))
 
     counter = font_small.render(str(coin2), True, BLACK)
-    DISPLAYSURF.blit(counter, (380, 10))
+    DISPLAYSURF.blit(counter, (350, 10))
+    game__over = font.render("Game Over", True, BLACK)
 
     # Check for collision with coins
     collided_coins = pygame.sprite.spritecollide(P1, coins, True)
